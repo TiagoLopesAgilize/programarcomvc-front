@@ -1,0 +1,36 @@
+
+
+<br>
+<br>
+<br>
+
+<input type="text" value="{{nomeCurso}}" > 
+
+<input type="text" [value]="nomeCurso" > 
+
+<input type="text" [value]="nomeCurso" (input)="nomeCurso = $event.target.value" />
+
+<input type="text" [ngModel]="nomeCurso" (ngModelChange)="nomeCurso = $event;" />
+
+<input type="text" [(ngModel)]="nomeCurso" />
+
+<input type="text" bindon-ngModel="nomeCurso" />
+
+<span>{{aluno?.pai?.endereco}} 
+
+<img [src]="">
+
+
+        <img src="{{urlImagem}}" />
+        <img [src]="urlImagem" />
+        <img bind-src="urlImagem" />
+
+<br>
+<br>
+
+<span>
+     {{nomeCurso}}
+    <ul>
+      <li *ngFor="let curso of cursos" > </li>
+    </ul>
+  </span><br>
