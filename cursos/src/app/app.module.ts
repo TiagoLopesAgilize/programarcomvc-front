@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+
 import {TabelasBasicasModule} from './tabelas-basicas/tabelas-basicas.module'
 
 @NgModule({
@@ -16,7 +17,8 @@ import {TabelasBasicasModule} from './tabelas-basicas/tabelas-basicas.module'
     TabelasBasicasModule, 
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]//,

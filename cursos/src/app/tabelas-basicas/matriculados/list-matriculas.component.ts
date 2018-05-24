@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import {CursosService} from './cursos.service';
 @Component({
   selector: 'list-cursos',
-  templateUrl: './list-matriculas.component.html'
+  templateUrl: './list-matriculas.component.html',
+  providers: [CursosService] 
 })
 export class ListMatriculasComponent {
   cursos = [];
@@ -17,7 +18,16 @@ export class ListMatriculasComponent {
       idade:45
     }
   }
-  constructor(){
+  constructor(private cursosService: CursosService){
 
   }
+
+  public listarCursos(){
+   // let cursos = new CursosService();
+    this.cursosService.obterCursos().subscribe((data: any) => {
+      console.log(data); 
+      this.cursos = data;
+    });;
+  }
+  
 }
