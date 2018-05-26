@@ -7,9 +7,12 @@ import {  Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- resultado : any;
+  resultado : any;
   usuario: string;
   senha: string;
+  cursos: any[];
+  isOpen = false;
+  nomeCursoSelecionado = '';
 
   constructor(private segurancaService: SegurancaService,
               private router: Router){
@@ -32,4 +35,47 @@ export class LoginComponent implements OnInit {
     console.log(`logado: ${flag}`);
     return flag;
   }
+  
+ filterCursos(event:any){
+  const query = event.target.value;
+  if(event && query) {
+    this.pesquisarCursos();
+    this.isOpen = true;
+    this.cursos = this.cursos.filter(function (el) {
+        return (el.nome.toLowerCase().indexOf(query.toLowerCase()) > -1
+          || el.codigo.toString().indexOf(query) > -1);
+      }.bind(this));
+  } else {
+    this.isOpen = false 
+  }
+
+ }
+
+ private pesquisarCursos(){
+
+    this.cursos = [{codigo:12, nome:'Angular'},
+              {codigo:3, nome:'React'},
+              {codigo:1, nome:'VueJs'}]
+
+  
+ }
+
+ filterCursosArrow() { 
+   if(!this.isOpen) {
+    this.pesquisarCursos();
+    this.isOpen = true;
+   } else {
+     this.isOpen = false;
+   }
+ }
+
+ filterSelectItem(item: any){
+  console.log(item);
+  
+  this.nomeCursoSelecionado += `${item.nome}  -  ` ;
+ }
+
+ selectFilter(flag:boolean) {
+  this.cursos = [];
+ }
 }

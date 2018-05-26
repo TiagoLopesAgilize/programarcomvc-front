@@ -1,0 +1,199 @@
+.option{
+        width: 219px;
+   /* float: left;*/
+        text-align: left;
+    
+}
+
+.select {
+        color: @cl_cinza_escuro_label;
+        height: 28px;
+        padding: 3px 0 3px 5px !important;
+        width: 100%;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+    }
+
+
+.filter .select{
+    height: 40px;
+    width: 192px;
+    padding: 0px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.filter .select-button {
+    background: rgba(0, 0, 0, 0.01);
+    border-left: 1px solid #e2e2e2;
+    width: 25px;
+    height: 40px;
+    position: relative;
+    display: block;
+    float: right;
+    margin-top: -40px;
+    margin-right: 1px;
+    cursor: pointer;
+}
+
+
+.filter .combo ul {
+    margin: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.filter .combo{
+    position: absolute;
+    background: #fff;
+    z-index: 100;
+    margin-top: -1px;
+    width: 192px;
+    border: 1px solid #ccc;
+}
+.filter-date{
+    float: right;
+    margin-right: 8px;
+}
+
+.input-date {
+  border: 1px solid #e2e2e2;
+  padding: 9px 0px;
+  text-align: center;
+  border-radius: 3px;
+  color: #a5a5a5;
+  font-size: 14px;
+}
+
+.filter .combo ul li{
+    padding: 10px 12px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    background: #fafafa;
+    font-size: 12px;
+    height: 40px;
+}
+
+.filter .combo ul li input{
+    float: left;
+}
+.filter .combo ul li span{
+    float: left;
+    margin-left: 5px;
+}
+
+.filter .combo .button-combo {
+    padding: 10px;
+}
+
+.button {
+    background-color: blue;
+    cursor: pointer;
+    padding: 7px 6px 3px 6px;
+    height: 38px;
+    min-width: 40px;
+    & i{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    &:hover:not(:disabled) {
+        background-color: blue;
+    }
+    &:disabled{
+        cursor:default;
+    }
+}
+
+.filter .combo .button-combo button {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    background: #005f95;
+    border-radius: 3px;
+    border: 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter .select-button img {
+    width: 5px;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+.option-date {
+    float: right;
+}
+
+.option-date p{
+    margin-top: 0px;
+}
+
+.filter {
+  height: 70px;
+  width: 100%;
+}
+
+.filter p{
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #888;
+}
+
+.filter .radio {
+  padding: 9px 5px 1px 8px;
+  background: #f9f9f9;
+  border-radius: 2px;
+  border: 1px solid #f1f1f1;
+  font-size: 14px;
+}
+
+.filter .radio label {
+  margin-right: 8px;
+}
+
+
+.combo{
+    text-align: left;
+}
+
+.filter .combo ul {
+    margin: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.filter .combo{
+    position: absolute;
+    background: #fff;
+    z-index: 100;
+    margin-top: -1px;
+    width: 192px;
+    border: 1px solid #ccc;
+}
+
+
+.filter .combo ul li input{
+    float: left;
+}
+.filter .combo ul li span{
+    float: left;
+    margin-left: 5px;
+}
+
+.filter .combo .button-combo {
+    padding: 10px;
+}
+
+.filter .combo .button-combo button {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    background: #005f95;
+    border-radius: 3px;
+    border: 0px;
+    font-size: 14px;
+    cursor: pointer;
+}

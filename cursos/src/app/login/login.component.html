@@ -1,6 +1,36 @@
+  <div class="filter">
+    <div class="option">
+       
+        <p>Curso</p>
+        
+        <input type="text" class="select" (keyup)="filterCursos($event)" value="{{nomeCursoSelecionado}}" placeholder="Selecione" autocomplete="on">
+       
+        <span class="select-button" style="margin-top: 0px;" (click)="filterCursosArrow()">
+            <img src="../assets/down-arrow-filter.svg" alt="">
+        </span>
 
+        <div class="combo" *ngIf="((isOpen) && (cursos && cursos.length > 0))">
+            <ul>
+                <li>  
+                <input type="checkbox" value="-1" (click)=filterSelectItem({})>
+                  <span>Todos os cursos</span>
+                </li>
+                <li *ngFor="let item of cursos">
+                    <input type="checkbox" value="{{item.codigo}}" (click)=filterSelectItem(item)>
+                    <span>{{item.nome}} - {{item.codigo}}</span>
+                    
+                </li>
+            </ul>
 
-    <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <div class="button-combo">
+                <button type="button" (click)="selectFilter(false)">OK</button>
+            </div>
+
+        </div>
+
+    </div>
+
+<img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input [(ngModel)]="usuario"  type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -14,3 +44,11 @@
     </div>
     <button (click)="efetuarLogin()" class="btn btn-lg btn-primary btn-block" type="button">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+</div>
+
+
+
+
+
+    
